@@ -7,12 +7,10 @@ exports.up = function (knex) {
       .foreign("critic_id")
       .references("critic_id")
       .inTable("critics")
-      .onDelete("cascade");
     table
       .foreign("movie_id")
       .references("movie_id")
       .inTable("movies")
-      .onDelete("cascade");
   });
 };
 
