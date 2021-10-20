@@ -1,6 +1,8 @@
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const service = require("./reviews.service");
 
+//Middleware
+
 async function reviewIdExists(req, res, next) {
   const { reviewId } = req.params;
   const foundReview = await service.read(reviewId);
@@ -13,6 +15,8 @@ async function reviewIdExists(req, res, next) {
     message: "Review cannot be found",
   });
 }
+
+//CRUD 
 
 async function update(req, res) {
   const updatedReview = { ...res.locals.review, ...req.body.data };

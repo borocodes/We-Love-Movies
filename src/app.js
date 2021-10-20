@@ -4,11 +4,11 @@ const cors = require("cors");
 const express = require("express");
 const app = express();
 
-//errorhandling
+//error handling
 const errorHandler = require("./errors/errorHandler");
 const notFound = require("./errors/notFound");
 
-//routers
+//routes
 const moviesRouter = require("./movies/movies.router");
 const theatersRouter = require("./theaters/theaters.router");
 const reviewsRouter = require("./reviews/reviews.router")
