@@ -12,11 +12,8 @@ const mapMovies = reduceProperties("theater_id", {
     is_showing: ["movies", null, "is_showing"],
   });
 
-  function list() {
-    return knex("theaters").select("*");
-  }
 
-  function listMoviesShowing() {
+  function list() {
       return knex("theaters as t")
       .join("movies_theaters as mt", "t.theater_id", "mt.theater_id")
       .join("movies as m", "mt.movie_id", "m.movie_id")
@@ -26,5 +23,4 @@ const mapMovies = reduceProperties("theater_id", {
 
   module.exports = {
       list,
-      listMoviesShowing,
   }

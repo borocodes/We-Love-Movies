@@ -21,20 +21,18 @@ function listTheaters(movieId) {
     .andWhere({ "mt.is_showing": true });
 }
 
-function listReviews(movieId) {
-  return knex("movies as m")
+async function listReviews(movieId) {
+  const reviews = await knex("movies as m")
     .join("reviews as r", "r.movie_id", "m.movie_id")
     .join("critics as c", "c.critic_id", "r.critic_id")
     .select("*")
-    .where({ "r.movie_id": movieId })
-    .then((reviews) => {
-      const reviewsWithCriticDetails = [];
-      reviews.forEach((review) => {
-        const addedCritic = addCriticDetails(review);
-        reviewsWithCriticDetails.push(addedCritic);
-      });
-      return reviewsWithCriticDetails;
-    });
+    .where({ "r.movie_id": movieId });
+  const reviewsWithCriticDetails = [];
+  reviews.forEach((review) => {
+    const addedCritic = criticDetails(review);
+    reviewsWithCriticDetails.push(addedCritic);
+  });
+  return reviewsWithCriticDetails;
 }
 
 function isShowingInTheaters() {
