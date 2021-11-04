@@ -16,3 +16,6 @@ All movies, all movies that are currently showing, and all theaters along with t
 
 
 ![ERD_screenshot](https://user-images.githubusercontent.com/83019759/140238042-b5212e9a-7864-436c-9425-f94125a231e0.png)
+
+
+<img width="1183" alt="WeLoveMovies" src="https://user-images.githubusercontent.com/83019759/140238324-e677e8ae-4af5-443e-aee9-5743bffc3959.png">
