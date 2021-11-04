@@ -14,4 +14,5 @@ Users can view the following lists:
 
 All movies, all movies that are currently showing, and all theaters along with the movies currently showing at each theater.
 
-https://user-images.githubusercontent.com/86169488/137957557-ea849c69-581c-4f05-86b5-412559a094ae.png
+
+![ERD_screenshot](https://user-images.githubusercontent.com/83019759/140238042-b5212e9a-7864-436c-9425-f94125a231e0.png)
